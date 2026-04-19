@@ -1,46 +1,42 @@
-# Passphrase Generator Pro
+# Passphrase Manager
 
-A Chrome extension that generates secure, memorable passwords using word-based passphrases instead of random characters.
+A secure Chrome extension that acts as a lightweight password manager with encrypted local storage and a built-in passphrase generator.
 
 ## Features
 
-- Diceware-style password generation
-- Strong but easy-to-remember passphrases
-- Password strength meter
-- Autofill into login fields
-- Detects login pages automatically
-- One-click password suggestions on websites
+- Encrypted password vault using AES-GCM
+- Master password protection
+- Store and retrieve credentials per website
+- Autofill login forms
+- Built-in passphrase generator
+- Works fully offline
 
-## Example Output
+## How It Works
 
-tiger-orbit-nebula-spark92!
-
-## Installation
-
-1. Download or clone this repository
-2. Open Chrome and go to chrome://extensions/
-3. Enable Developer Mode
-4. Click "Load unpacked"
-5. Select the extension folder
+- All passwords are encrypted locally before being stored
+- Your master password is never saved
+- Decryption only happens in memory when unlocked
 
 ## Usage
 
-- Click the extension icon to generate passwords
-- Use autofill to insert into login forms
-- On login pages, a suggestion popup appears automatically
+1. Enter master password and unlock
+2. Add site, username, and password
+3. Save credentials securely
+4. Load or autofill anytime
 
-## Security Notes
+## Security
 
-- Uses random word combinations for strong entropy
-- Strength increases with more words
-- Optional numbers and symbols improve security further
+- AES-256 encryption via Web Crypto API
+- PBKDF2 key derivation
+- No external servers
+- No tracking
 
-## Customisation
+## Installation
 
-- Expand the word list in words.js for higher security
-- Adjust UI styles in style.css
-- Modify generation logic in popup.js
+1. Go to chrome://extensions/
+2. Enable Developer Mode
+3. Load unpacked extension folder
 
-## License
+## Warning
 
-MIT
+If you forget your master password, your data cannot be recovered.
