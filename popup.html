@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Password Manager</h1>
+
+    <input type="password" id="master" placeholder="Master password">
+
+    <button id="unlock">Unlock</button>
+
+    <div id="app" class="hidden">
+      <input id="site" placeholder="site.com">
+      <input id="username" placeholder="username">
+      <input id="password" placeholder="password">
+
+      <button id="generate">Generate</button>
+      <button id="save">Save</button>
+      <button id="load">Load</button>
+      <button id="autofill">Autofill</button>
+
+      <div id="output"></div>
+    </div>
+  </div>
+
+  <script src="crypto.js"></script>
+  <script src="words.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
